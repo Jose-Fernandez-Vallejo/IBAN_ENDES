@@ -28,6 +28,7 @@ namespace IBANTest
         public void ElCCEsValido()
         {
             string CC = "20852066623456789011";
+
             Assert.IsTrue(IBAN.ValidarCC(CC));
         }
 
@@ -37,6 +38,7 @@ namespace IBANTest
             try
             {
                 string CC = "123458001234567890";
+
                 IBAN.ValidarCC(CC);
                 Assert.Fail("Longitud Incorrecta");
             }
@@ -52,6 +54,7 @@ namespace IBANTest
             try
             {
                 string CC =  "12345j6789001234h56h";
+
                 IBAN.ValidarCC(CC);
                 Assert.Fail("Formato mal");
             }
@@ -99,6 +102,7 @@ namespace IBANTest
         {
             string CC = "20852066223456789011142800";
             string[] ccDividido =IBAN.dividirIBAN(CC);
+
             Assert.AreEqual(5, ccDividido.Length);
         }
     }

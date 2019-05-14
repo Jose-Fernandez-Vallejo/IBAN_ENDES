@@ -24,23 +24,19 @@ namespace ValidarIBAN
         public static string CalcularNumeroControl(string cadena)
         {
             int[] multiplicador = new int[] { 4, 8, 5, 10, 9, 7, 3, 6, 0, 0, 1, 2, 4, 8, 5, 10, 9, 7, 3, 6 };
-            string resultado;
-
+            string resultado = string.Empty;
             int acumulador1 = 0;
             int acumulador2 = 0;
-
 
             if (cadena.Length != 20)
             {
                 throw new LongitudIncorrectaException();
             }
-
             for (int i = 0; i < 10; i++)
             {
                 try
                 {
                     acumulador1 += int.Parse(cadena[i].ToString()) * multiplicador[i];
-
                     acumulador2 += int.Parse(cadena[i + 10].ToString()) * multiplicador[i + 10];
                 }
                 catch (FormatException)
@@ -51,7 +47,6 @@ namespace ValidarIBAN
             resultado = CalculoAculmulador(acumulador1);
             resultado += CalculoAculmulador(acumulador2);
 
-
             return resultado;
         }
 
@@ -59,11 +54,17 @@ namespace ValidarIBAN
         {
             int resultadoTmp = 11 - (acumulador % 11);
             if (resultadoTmp == 10)
+            {
                 return "1";
+            }
             else if (resultadoTmp == 11)
+            {
                 return "0";
+            }
             else
+            {
                 return resultadoTmp.ToString();
+            }
         }
 
         public static string[] dividirIBAN(string cadena)
@@ -96,10 +97,9 @@ namespace ValidarIBAN
             {
                 NumeroControl = "0" + NumeroControl;
             }
+
             return NumeroControl;
         }
-
-
 
         public static bool ValidarIBAN(string Cadena)
         {
