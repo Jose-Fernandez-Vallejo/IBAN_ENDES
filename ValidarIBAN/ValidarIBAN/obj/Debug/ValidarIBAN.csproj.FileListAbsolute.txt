@@ -8,3 +8,8 @@ E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\ValidarIBAN\bin\Debug\Va
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.csprojResolveAssemblyReference.cache
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.dll
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.pdb
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\ValidarIBAN\bin\Debug\ValidarIBAN.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\ValidarIBAN\bin\Debug\ValidarIBAN.pdb
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.csprojResolveAssemblyReference.cache
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\ValidarIBAN\obj\Debug\ValidarIBAN.pdb

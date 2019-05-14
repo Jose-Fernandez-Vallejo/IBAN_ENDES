@@ -8,3 +8,12 @@ E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\IBANTest\bin\Debug\Valid
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\IBANTest\bin\Debug\nunit.framework.xml
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\IBANTest\obj\Debug\IBANTest.dll
 E:\1 superior\PROG\ejercicios visual studio\ValidarIBAN\IBANTest\obj\Debug\IBANTest.pdb
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\IBANTest.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\IBANTest.pdb
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\nunit.framework.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\ValidarIBAN.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\ValidarIBAN.pdb
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\bin\Debug\nunit.framework.xml
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\obj\Debug\IBANTest.csprojResolveAssemblyReference.cache
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\obj\Debug\IBANTest.dll
+F:\ProyectosGit\IBAN_ENDES\ValidarIBAN\IBANTest\obj\Debug\IBANTest.pdb

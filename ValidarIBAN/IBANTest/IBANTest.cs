@@ -15,11 +15,11 @@ namespace IBANTest
         [Test]
         public void ElDigitoDeControlSeCalculaCorrectamente()
         {
-            int acumulador1 = 5;    //debe devolver 11 - el numero insertado (6)
+            int acumulador1 = 6;    //debe devolver 11 - el numero insertado (5)
             int acumulador2 = 10;   // debe devolver 1
             int acumulador3 = 11;   // debe devolver 0
 
-            Assert.AreEqual("6", IBAN.CalculoAculmulador(acumulador1));
+            Assert.AreEqual("5", IBAN.CalculoAculmulador(acumulador1));
             Assert.AreEqual("1", IBAN.CalculoAculmulador(acumulador2));
             Assert.AreEqual("0", IBAN.CalculoAculmulador(acumulador3));
         }

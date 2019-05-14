@@ -10,7 +10,7 @@ namespace ValidarIBAN
     public class LongitudIncorrectaException : Exception { }
     public class ParametroFormatoIncorrecto : Exception { }
 
-    //Ahora mismo solo funciona con EL IBAN "ES" porque no se exactamente que tipo de parametros y como se le van a pasar
+
     public class IBAN
     {
         
@@ -46,7 +46,6 @@ namespace ValidarIBAN
                     throw new ParametroFormatoIncorrecto();
                 }
             }
-
             resultado = CalculoAculmulador(acumulador1);
             resultado += CalculoAculmulador(acumulador2);
 
