@@ -93,5 +93,13 @@ namespace IBANTest
 
             Assert.IsFalse(IBAN.ValidarIBAN(CC));
         }
+
+        [Test]
+        public void ElMetodoParaDividirElIBANLoDivideCorrectamente()
+        {
+            string CC = "20852066223456789011142800";
+            string[] ccDividido =IBAN.dividirIBAN(CC);
+            Assert.AreEqual(5, ccDividido.Length);
+        }
     }
 }

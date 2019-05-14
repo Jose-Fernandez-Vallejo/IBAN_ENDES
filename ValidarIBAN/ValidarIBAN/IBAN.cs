@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace ValidarIBAN
 {
 
     public class LongitudIncorrectaException : Exception { }
     public class ParametroFormatoIncorrecto : Exception { }
 
-
+// este .cs tiene todas las clases publicas para poder hacerle las pruebas unitarias
     public class IBAN
     {
         
