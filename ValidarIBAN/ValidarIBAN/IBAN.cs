@@ -79,10 +79,22 @@ namespace ValidarIBAN
         public static string CalcularNumeroControlIBAN(string cadena)
         {
             string ES = "142800";
-            Decimal IBANCompleto = 0;
-            cadena = cadena + ES;
-            IBANCompleto = Decimal.Parse(cadena);
-            return (98 - (IBANCompleto % 97)).ToString();
+            string IBAN = cadena + ES;
+            string[] IBANDividido = dividirIBAN(IBAN);
+            string NumeroControl = string.Empty;
+
+            for (int i = 0; i < IBANDividido.Length; i++)
+            {
+                NumeroControl += IBANDividido[i];
+                NumeroControl = (int.Parse(NumeroControl) % 97).ToString();
+            }
+
+            NumeroControl = (98 - (int.Parse(NumeroControl))).ToString();
+            if (NumeroControl.Length == 1)
+            {
+                NumeroControl = "0" + NumeroControl;
+            }
+            return NumeroControl;
         }
 
 
