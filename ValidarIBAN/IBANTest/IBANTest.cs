@@ -66,7 +66,7 @@ namespace IBANTest
         { 
             string CC =  "20852066623456789011";
 
-            Assert.AreEqual("17", IBAN.CalcularIBAN(CC));
+            Assert.AreEqual("17", IBAN.CalcularNumeroControlIBAN(CC));
         }
 
         [Test]
@@ -74,7 +74,7 @@ namespace IBANTest
         {
             string CC = "ES1720852066623456789011";
 
-            Assert.IsTrue(IBAN.Validar(CC));
+            Assert.IsTrue(IBAN.ValidarIBAN(CC));
         }
 
         [Test]
@@ -82,7 +82,7 @@ namespace IBANTest
         {
             string CC = "ES1220852066623456789011";
 
-            Assert.IsFalse(IBAN.Validar(CC));
+            Assert.IsFalse(IBAN.ValidarIBAN(CC));
         }
 
 
@@ -91,7 +91,7 @@ namespace IBANTest
         {
             string CC = "ES1720852066223456789011";
 
-            Assert.IsFalse(IBAN.Validar(CC));
+            Assert.IsFalse(IBAN.ValidarIBAN(CC));
         }
     }
 }

@@ -64,8 +64,19 @@ namespace ValidarIBAN
                 return resultadoTmp.ToString();
         }
 
+        public static string[] dividirIBAN(string cadena)
+        {
+            string[] IBAN = new string[5];
+            IBAN[0] = cadena.Substring(0, 5);
+            IBAN[1] = cadena.Substring(5, 5);
+            IBAN[2] = cadena.Substring(10, 5);
+            IBAN[3] = cadena.Substring(15, 5);
+            IBAN[4] = cadena.Substring(20, 6);
 
-        public static string CalcularIBAN(string cadena)
+            return IBAN;
+        }
+
+        public static string CalcularNumeroControlIBAN(string cadena)
         {
             string ES = "142800";
             Decimal IBANCompleto = 0;
@@ -74,7 +85,9 @@ namespace ValidarIBAN
             return (98 - (IBANCompleto % 97)).ToString();
         }
 
-        public static bool Validar(string Cadena)
+
+
+        public static bool ValidarIBAN(string Cadena)
         {
             string CC = Cadena.Substring(4, 20);
             string ControlIBAN = Cadena.Substring(2, 2);
@@ -84,7 +97,7 @@ namespace ValidarIBAN
                 return false;
             }
 
-            return ControlIBAN == CalcularIBAN(CC);
+            return ControlIBAN == CalcularNumeroControlIBAN(CC);
         }
     }
 }
