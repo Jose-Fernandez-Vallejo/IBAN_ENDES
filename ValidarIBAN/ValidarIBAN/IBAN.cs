@@ -12,6 +12,8 @@ namespace ValidarIBAN
     public class LongitudIncorrectaException : Exception { }
     public class ParametroFormatoIncorrecto : Exception { }
     public class IbanNoEspanolExeption : Exception { }
+    public class NumerosControlIBANFormatoIncorrectoException : Exception { }
+
 
 // este .cs tiene todas las clases publicas para poder hacerle las pruebas unitarias, el final deberia tener la gran mayoria en private pues no es necesario que el usuario las vea
     public class IBAN
@@ -110,6 +112,16 @@ namespace ValidarIBAN
             if (Cadena[0] != 'E' || Cadena[1] != 'S')
             {
                 throw new IbanNoEspanolExeption();
+            }
+
+            try
+            {
+                int.Parse(Cadena.Substring(2, 2));
+            }
+            catch
+            {
+                
+                throw new NumerosControlIBANFormatoIncorrectoException();
             }
 
 

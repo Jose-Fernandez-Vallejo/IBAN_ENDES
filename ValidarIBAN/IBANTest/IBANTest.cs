@@ -105,5 +105,39 @@ namespace IBANTest
 
             Assert.AreEqual(5, ccDividido.Length);
         }
+
+        [Test]
+        public void AlValidarIBANNoEspanolSaltaExcepcion()
+        {
+            try
+            {
+                string iban = "FR0212345678101023749586";
+
+                IBAN.ValidarIBAN(iban);
+                Assert.Fail("iban no español");
+            }
+            catch (IbanNoEspanolExeption)
+            {
+                //algo
+            }
+        }
+
+        [Test]
+        public void AlValidarIBANConFormatoIncorrectoSaltaExcepcion()
+        {
+            try
+            {
+                string iban = "ESgM12345678101023749586";
+
+                IBAN.ValidarIBAN(iban);
+                Assert.Fail("Formato de los numeros de control del IBAN incorrecto");
+            }
+            catch (NumerosControlIBANFormatoIncorrectoException)
+            {
+                //algo
+            }
+        }
+
+
     }
 }
